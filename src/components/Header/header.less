@@ -1,13 +1,15 @@
 @import "../../utils/less/variables.less";
 
 .header{
-        .h(40);
+        .h(75);
         background-color: white;
-        border-bottom: skyblue solid 2px;
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        padding: 0 20px;
+        .upper{
+            .h(40);
+            border-bottom: skyblue solid 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 20px;
         .welcome{
             line-height: 0.8rem;
         }
@@ -18,4 +20,7 @@
             text-transform: capitalize;
             .f(22)
         }
+
+        }
+        
 }

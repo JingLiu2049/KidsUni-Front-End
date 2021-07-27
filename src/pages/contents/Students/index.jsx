@@ -1,6 +1,4 @@
 import { Switch,Route,Redirect } from 'react-router-dom'
-import { studentsNav } from "../../../configs/subNavConfig"
-import SubNav from "../../../components/SubNav"
 import StudentsList from './StudentsList'
 import AddStudents from './AddStudents'
 import UploadStudents from './UploadStudents'
@@ -12,7 +10,6 @@ export default function Students(props) {
     return(
         <div className="contentWrp" >
 
-            <SubNav urls={studentsNav} />
 
 
             <div>
