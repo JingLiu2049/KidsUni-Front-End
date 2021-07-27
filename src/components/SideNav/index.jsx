@@ -21,15 +21,15 @@ function SideNav(props) {
   useComponentWillMount(()=>{
     initOpenSub = `/${currentPath.split('/').filter(i => i)[0]}`
   })
-  // set initial opened sub menu 
+  // set initially opened sub menu 
   const [openKeys, setOpenKeys] = React.useState([initOpenSub]);
 
-  // function used to handle menu item click
+  // function to handle menu item click
   const handleClick = e => {
     props.history.push(e.key)
   }
 
-  // fucntion used to open and close sub-menu
+  // fucntion to open and close sub-menu
   const onOpenChange = keys => {
     console.log('openKeys',openKeys)
     const latestOpenKey = keys.find(key => openKeys.indexOf(key) === -1);
@@ -42,7 +42,7 @@ function SideNav(props) {
     }
   };
 
-  // function used to create menu based on data from navConfigs.js
+  // function to create menu items based on data from navConfigs.js
   const getNavNodes = navList => {
     return navList.map(item => {
       if (item.children) {
