@@ -16,14 +16,14 @@ export default function Home(props) {
         
     return (
       
-        <Layout className='layout'style={{height:'100%'}} >
+        <Layout className='layout' style={{ minHeight: '100%'}}>
       <Sider className='sider' width="4rem"  >
           <SideNav />
       </Sider>
       <Layout >
         <Header />
-        <Content style={{backgroundColor:'#EDF2F3',padding:'10px'}}>
-          <div style={{backgroundColor:'white',height:'100%'}}>
+        <Content style={{backgroundColor:'#EDF2F3'}}>
+          <div style={{backgroundColor:'white', padding:'0 20px'}}>
           <Suspense fallback={ <Loading/> } >
           <Switch>
             {
@@ -38,7 +38,7 @@ export default function Home(props) {
           </Suspense>
           </div>
         </Content>
-        <Footer>Footer</Footer>
+        <Footer style={{height:'30px'}} >Footer</Footer>
       </Layout>
     </Layout>
     )

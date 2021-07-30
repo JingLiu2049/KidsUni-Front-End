@@ -75,6 +75,7 @@ function SideNav(props) {
         onClick={handleClick}
         onOpenChange={onOpenChange}
         openKeys={openKeys}
+        inlineIndent= {16}
       >
         {navNotes}
       </Menu>

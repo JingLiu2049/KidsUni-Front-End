@@ -1,6 +1,8 @@
 import { message } from 'antd'
 import axios from 'axios'
+const BASE = 'http://localhost:3000/api/'
 function ajax(url, data = {}, type = 'get') {
+    
     return (
         new Promise((resolve, reject) => {
             axios({ method: type, url, data })
@@ -15,4 +17,10 @@ function ajax(url, data = {}, type = 'get') {
     )
 }
 
-export const reqLogin = data => ajax('api/login', data, 'post')
+export const reqLogin = data => ajax(BASE+'login', data, 'post')
+export const reqEvents = () => ajax(BASE+'events')
+export const reqDeleteEvent = _id => ajax(BASE+'events',{_id},'delete')
+
+
+
+
