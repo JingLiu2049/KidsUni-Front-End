@@ -12,7 +12,7 @@ function getSubNav(pathHead){
 
 const sideNavList = [
     { title: 'Dashboard', key: '/dashboard', path: '/dashboard' },
-    {title: 'Students', key: '/students', path: '/students',children: getSubNav('students')},
+    { title: 'Students', key: '/students', path: '/students',children: getSubNav('students')},
     { title: 'Schools', key: '/schools', path: '/schools', children: getSubNav('schools') },
     { title: 'Volunteers', key: '/volunteers', path: '/volunteers', children: getSubNav('volunteers') },
     { title: 'Events', key: '/events', path: '/events', children: getSubNav('events') },
@@ -28,7 +28,8 @@ export const topNavList=[
     ...getSubNav('schools'),
     ...getSubNav('volunteers'),
     ...getSubNav('events'),
-    ...getSubNav('users')
+    ...getSubNav('users'),
+    {path:`/events/update`,key:`/events/update`,title:`Update`},
 ]
 
 export const rootSubmenuKeys = ['/students', '/schools', '/volunteers','/events','/users'];

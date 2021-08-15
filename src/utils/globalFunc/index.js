@@ -1,5 +1,6 @@
 import {message} from 'antd'
 
+// renturn a function that sents AJAX requrest and update state 
 export const getRespFunc = (reqFunc,setStateFunc, setLoading,data=null )=>{
     return( async ()=>{
      const result = await reqFunc(data)

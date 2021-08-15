@@ -20,6 +20,7 @@ function ajax(url, data = {}, type = 'get') {
 export const reqLogin = data => ajax(BASE+'login', data, 'post')
 export const reqEvents = () => ajax(BASE+'events')
 export const reqDeleteEvent = _id => ajax(BASE+'events',{_id},'delete')
+export const reqUpdateEvent = data =>ajax(BASE+'events/update',data,'post')
 
 
 

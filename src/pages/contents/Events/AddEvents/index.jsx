@@ -1,7 +1,8 @@
 
+import EventForm from '../EventForm'
 
 export default function AddEvents(props){
-    return(
-        <div>add events</div>
+    return (
+        <EventForm event={{_id:"new"}}/>
     )
 }

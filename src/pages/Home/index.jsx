@@ -1,6 +1,7 @@
 import { Suspense} from 'react'
 import { Redirect, Switch, Route} from 'react-router-dom';
 import { Layout } from 'antd';
+
 import  memoryUtil  from '../../utils/memoryUtil'
 import SideNav from '../../components/SideNav';
 import Loading from '../../components/Loading';
@@ -23,7 +24,7 @@ export default function Home(props) {
       <Layout >
         <Header />
         <Content style={{backgroundColor:'#EDF2F3'}}>
-          <div style={{backgroundColor:'white', padding:'0 20px'}}>
+          <div style={{backgroundColor:'white', padding:'0 20px', minHeight: '100%'}}>
           <Suspense fallback={ <Loading/> } >
           <Switch>
             {
