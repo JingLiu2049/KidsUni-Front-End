@@ -9,6 +9,7 @@ export const getRespFunc = (reqFunc,setStateFunc, setLoading,data=null )=>{
      if (result.status === 1) {
          setLoading(false)
          setStateFunc(result.data)
+         if (result.msg) message.success(result.msg)
      } else {
          setLoading(false)
          message.error(result.msg)
